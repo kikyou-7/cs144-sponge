@@ -18,7 +18,7 @@ void get_URL(const string &host, const string &path) {
     // the "eof" (end of file).
     TCPSocket http_socket;  // 创建套接字
     auto addr_server = Address(host, "http");  // 服务器地址
-    http_socket.connect(addr_server);  // 本地套接字连接服务器
+    http_socket.connect(addr_server);  // 套接字连接服务器
     // 通过套接字写入http请求
     http_socket.write("GET " + path + " HTTP/1.1\r\n");
     http_socket.write("Host: " + host + "\r\n");
