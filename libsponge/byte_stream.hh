@@ -11,7 +11,14 @@
 class ByteStream {
   private:
     // Your code here -- add private members as necessary.
-
+    std::string buffer_;
+    int head_;  // 循环队列的队头
+    int tail_;  // 循环队列的队尾后一个位置
+    size_t size_;  // 队列实际大小
+    size_t capacity_;
+    bool input_end_;
+    size_t written_count_;
+    size_t read_count_;
     // Hint: This doesn't need to be a sophisticated data structure at
     // all, but if any of your tests are taking longer than a second,
     // that's a sign that you probably want to keep exploring
